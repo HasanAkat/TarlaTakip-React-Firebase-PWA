@@ -1,0 +1,176 @@
+﻿.farmers {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.farmers__toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.farmers__back {
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 1rem;
+}
+
+.farmers__back:hover {
+  border-color: var(--color-border-strong);
+}
+
+.farmers__list {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.farmers__card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+  display: grid;
+  gap: var(--spacing-md);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.farmers__card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
+}
+
+.farmers__card--expanded {
+  background: var(--color-surface-soft);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
+}
+
+.farmers__card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.farmers__card-title {
+  flex: 1;
+  display: grid;
+  gap: 4px;
+}
+
+.farmers__card-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.farmers__card-phone {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.farmers__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  padding: 0;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(47, 133, 90, 0.12);
+  color: var(--color-primary-dark);
+  border: none;
+  font-weight: 700;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.farmers__toggle--expanded {
+  transform: rotate(90deg);
+}
+
+.farmers__details {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-md);
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.farmers__detail-grid {
+  display: grid;
+  gap: var(--spacing-sm);
+  font-size: 0.9rem;
+}
+
+.farmers__detail-value {
+  opacity: 0.85;
+}
+
+.farmers__detail-pre {
+  margin: 6px 0 0;
+  padding: 10px;
+  background: var(--color-surface-soft);
+  border-radius: var(--radius-sm);
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.85rem;
+}
+
+.farmers__editor {
+  display: grid;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(47, 133, 90, 0.25);
+  background: rgba(47, 133, 90, 0.08);
+}
+
+.farmers__editor-title {
+  font-weight: 600;
+}
+
+.farmers__editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.farmers__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.farmers__error {
+  color: var(--color-danger);
+}
+
+.farmers__empty {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 640px) {
+  .farmers__card {
+    padding: 16px;
+  }
+
+  .farmers__toolbar {
+    flex-wrap: wrap;
+  }
+}
+.farmer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.farmer-form input {
+  flex: 1 1 160px;
+}
+
+.farmer-form button {
+  align-self: stretch;
+}

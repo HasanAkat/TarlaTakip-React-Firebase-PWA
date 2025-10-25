@@ -1,0 +1,6 @@
+﻿User-agent: *
+Allow: /
+
+# Allow service worker and manifest for PWA detection
+Allow: /manifest.webmanifest
+Allow: /sw.js

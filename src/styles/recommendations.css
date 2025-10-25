@@ -1,0 +1,297 @@
+﻿.recommendations {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.recommendations__toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.recommendations__back {
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 1rem;
+}
+
+.recommendations__back:hover {
+  border-color: var(--color-border-strong);
+}
+
+.recommendations__intro {
+  color: var(--color-text-muted);
+  margin: -8px 0 0;
+}
+
+.recommendation-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.recommendation-form input {
+  flex: 1 1 240px;
+}
+
+.recommendation-form select {
+  flex: 0 0 160px;
+}
+
+.recommendations__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.recommendations__filters input,
+.recommendations__filters select {
+  flex: 0 0 200px;
+}
+
+.recommendations__list {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.recommendations__item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: var(--spacing-md);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.recommendations__item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
+}
+
+.recommendations__item--expanded {
+  background: var(--color-surface-soft);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.recommendations__item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.recommendations__item-title {
+  flex: 1;
+  display: grid;
+  gap: 4px;
+}
+
+.recommendations__item-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.recommendations__item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.recommendations__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(47, 133, 90, 0.16);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.recommendations__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.recommendations__picker {
+  position: relative;
+}
+
+.recommendations__picker-label {
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.recommendations__picker-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.recommendations__picker-summary {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommendations__picker-count {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.recommendations__picker-panel {
+  position: absolute;
+  z-index: 12;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 280px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.recommendations__picker-search {
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recommendations__picker-list {
+  padding: var(--spacing-sm);
+  overflow-y: auto;
+  max-height: 220px;
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.recommendations__picker-option {
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: #f8fafc;
+}
+
+.recommendations__picker-option--active {
+  border-color: var(--color-primary);
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-primary-dark);
+}
+
+.recommendations__picker-option-name {
+  font-weight: 600;
+}
+
+.recommendations__picker-option-kind {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.recommendations__picker-empty {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+.recommendations__edit {
+  display: grid;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.recommendations__edit-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.recommendations__edit-row input {
+  flex: 1 1 240px;
+}
+
+.recommendations__edit-row select {
+  flex: 0 0 180px;
+}
+
+.recommendations__empty {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 680px) {
+  .recommendations__item {
+    padding: 16px;
+  }
+}
+.recommendations__filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-soft);
+}
+
+.recommendations__filter-input {
+  flex: 1 1 240px;
+  min-width: 200px;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.recommendations__filter-select {
+  flex: 0 0 180px;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.recommendations__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(47, 133, 90, 0.12);
+  color: var(--color-primary-dark);
+  border: none;
+  font-weight: 700;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.recommendations__toggle--expanded {
+  transform: rotate(90deg);
+}

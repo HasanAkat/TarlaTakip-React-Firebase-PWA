@@ -1,0 +1,115 @@
+﻿.dashboard {
+  display: grid;
+  gap: 28px;
+}
+
+.dashboard__intro {
+  margin: 0;
+  color: var(--color-text-muted);
+  max-width: 640px;
+}
+
+.dashboard__shortcut-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.dashboard__shortcut {
+  display: block;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard__shortcut:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard__shortcut-title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+}
+
+.dashboard__shortcut-text {
+  margin: 0 0 16px;
+  color: var(--color-text);
+  line-height: 1.45;
+}
+
+.dashboard__shortcut-cta {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.dashboard__recent {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.dashboard__recent-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.dashboard__recent-info {
+  display: grid;
+  gap: 4px;
+}
+
+.dashboard__recent-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.dashboard__refresh {
+  margin-left: auto;
+}
+
+.dashboard__table-wrapper {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.dashboard__note {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 280px;
+}
+
+.dashboard__error {
+  color: var(--color-danger);
+}
+
+.dashboard__empty,
+.dashboard__loading {
+  padding: var(--spacing-lg);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 680px) {
+  .dashboard__refresh {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,58 @@
+﻿.install-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 34, 25, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.install-modal {
+  width: min(100%, 380px);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(47, 133, 90, 0.25);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  gap: 18px;
+}
+
+.install-modal__heading {
+  display: grid;
+  gap: 6px;
+}
+
+.install-modal__title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+}
+
+.install-modal__description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.install-modal__actions {
+  display: grid;
+  gap: 10px;
+}
+
+.install-modal__actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.install-modal__actions .btn--secondary {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.install-modal__actions .btn--secondary:hover {
+  border-color: var(--color-border-strong);
+}
